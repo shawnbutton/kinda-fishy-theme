@@ -7,8 +7,8 @@
 local user_color='green'; [ $UID -eq 0 ] && user_color='red'
 if [[ -n "$SSH_CLIENT" ]]; then
   PROMPT='%n@%m %{$fg[$user_color]%}%~%{$reset_color%}%(!.#.>) '
-elif [[ "$(grep docker /proc/1/cgroup)" ]]; then
-  PROMPT='%n@docker %{$fg[$user_color]%}%~%{$reset_color%}%(!.#.>) '
+#elif [[ "$(grep docker /proc/1/cgroup)" ]]; then
+#  PROMPT='%n@docker %{$fg[$user_color]%}%~%{$reset_color%}%(!.#.>) '
 else
   PROMPT='%{$fg[$user_color]%}%~%{$reset_color%}%(!.#.>) '
 fi 
